@@ -36,6 +36,6 @@ body {
   padding-top:50px;
 }*/
 
-#about >h2{
+#about, #contact >h2{
   color:#cc3300;
 }
