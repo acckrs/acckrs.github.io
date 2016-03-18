@@ -22,12 +22,14 @@
 .navbar-wrapper .navbar .container {
   width: auto;
 }
-
+.navbar-font{
+  font-family:'Montserrat', sans-serif;
+}
 
 body {
   margin-top:50px;
 }
- 
+
 .page-header  {
    background-color:#efeff5;
 }
