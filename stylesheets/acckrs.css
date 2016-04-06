@@ -38,11 +38,12 @@ body {
 }
 
  #about {
-  padding-top:6em;
+  padding-top:4em;
+  padding-bottom:2em;
 }
-#contact, #portfolio2 {
-	margin-top: 5em
-	padding-top: 5em
+#contact, #portfolio {
+	
+	padding-top: 4em;
 }
 
 #about >h2, #contact >h2{
