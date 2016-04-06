@@ -37,8 +37,12 @@ body {
    background-color:#efeff5;
 }
 
- #contact #about #portfolio2{
+ #about {
   padding-top:6em;
+}
+#contact, #portfolio2 {
+	margin-top: 5em
+	padding-top: 5em
 }
 
 #about >h2, #contact >h2{
