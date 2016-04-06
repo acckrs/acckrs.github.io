@@ -37,9 +37,9 @@ body {
    background-color:#efeff5;
 }
 
-/*#contact, #about, #home_slika, #portfolio{
-  padding-top:50px;
-}*/
+ #contact #about #portfolio2{
+  padding-top:6em;
+}
 
 #about >h2, #contact >h2{
   color:#cc3300;
