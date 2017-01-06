@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -11,6 +11,23 @@
 	<link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="stylesheets/acckrs.css" media="screen">
+    <script>
+        $(document).ready(function(){
+            function randomQuote() {
+                $.ajax({
+                    url: "http://api.forismatic.com/api/1.0/?",
+                    dataType: "jsonp",
+                    data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+                    success: function (response) {
+                        $(".message").html("<p id='random_quote' class='lead text-center'>" +
+                          response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
+                        $("#tweet").attr("href", "http://twitter.com/home/?status=" + response.quoteText +
+                          ' (' + response.quoteAuthor + ')');
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 <body>
 <!-- NAVBAR
@@ -72,7 +89,7 @@
 		</div>
 		<blockquote class="blockquote-reverse">
 			<p id="random-quote">Knowledge rests not upon truth alone, but upon error also.</p>
-			<footer id="quoteAuthor">C.G. Jung</footer>
+			<footer id="quoteAuthor">C.C.G. Jung</footer>
 		</blockquote>
 	</div>
   </div>
