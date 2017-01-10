@@ -21,12 +21,20 @@ function loadData() {
     // load streetview
 
     // YOUR CODE GOES HERE!
-    $.ajax({
+    /*$.ajax({
         url: url,
         method: 'GET',
     }).done(function (result) {
         console.log(result);
+    });*/
+    $.getJSON($url, function (data) {
+        var items = [];
+        $.each(data, function (key, val) {
+            items.push("<li id='" + key + "'>" + val + "</li>");
+        });
+        console.log(items[0].lead_paragraph);
     });
+
     $greeting.text('So you want to live in '+ $("#street").val() + ',' + $("#city").val()+'?').css("color","white")
     $body.append('<img class="bgimg" src="http://maps.googleapis.com/maps/api/streetview?size=600x300&location=' + $address + '">')
     return false;
