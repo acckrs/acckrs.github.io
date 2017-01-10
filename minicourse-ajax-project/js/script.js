@@ -21,7 +21,7 @@ function loadData() {
     // load streetview
 
     // YOUR CODE GOES HERE!
-    $.getJSON({
+    $.ajax({
         url: url,
         method: 'GET',
     }).done(function (result) {
