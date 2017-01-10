@@ -23,19 +23,21 @@ function loadData() {
     // YOUR CODE GOES HERE!
     $.ajax({
         url: $url,
-        method: 'GET',
     }).done(function (result) {
         var items = [];
-        /*$.each(result, function (key, val) {
-            items.push("<li id='" + key + "'>" + val + "</li>");
-        });*/
-        result.forEach(function (val) {
-            var keys = Object.keys(val);
+        $.each(result, function (key, val) {
+            items.push([val]);
         });
-        keys.forEach(function (key) {
-            console.log(key);
-                });
-       
+         
+        /*result.forEach(function (val) {
+             var keys = Object.keys(val);
+         });
+         keys.forEach(function (key) {
+             console.log(key);
+                 });*/
+        for (var i = 0; i < items[0][0].docs.length; i++) {
+            console.log("*** Bla ***" + items[0][0].docs[i].snippet + "*** Bla ***");
+        }
     });
     /*$.getJSON($url, function (data) {
         var items = [];
