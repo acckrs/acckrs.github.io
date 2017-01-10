@@ -25,7 +25,7 @@ function loadData() {
         url: url,
         method: 'GET',
     }).done(function (result) {
-        console.log(result.docs[0].lead_paragraph);
+        console.log(result);
     });
     $greeting.text('So you want to live in '+ $("#street").val() + ',' + $("#city").val()+'?').css("color","white")
     $body.append('<img class="bgimg" src="http://maps.googleapis.com/maps/api/streetview?size=600x300&location=' + $address + '">')
