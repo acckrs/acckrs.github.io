@@ -26,7 +26,7 @@ function loadData() {
     }).done(function (result) {
         var items = [];
         $.each(result, function (key, val) {
-            items.push([val]);
+            items.push([val[0]]);
         });
          
         /*result.forEach(function (val) {
@@ -36,7 +36,7 @@ function loadData() {
              console.log(key);
                  });*/
         for (var i = 0; i < items[0][0].docs.length; i++) {
-            console.log("*** Bla ***" + items[0][0].docs[i].snippet + "*** Bla ***");
+            console.log("*** Bla ***" + items[0].docs[i].snippet + "*** Bla ***");
         }
     });
     /*$.getJSON($url, function (data) {
