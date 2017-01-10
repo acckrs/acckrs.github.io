@@ -26,7 +26,7 @@ function loadData() {
     }).done(function (result) {
         var items = [];
         $.each(result, function (key, val) {
-            items.push([val[0]]);
+            items.push([val.response.docs.snippet]);
         });
          
         /*result.forEach(function (val) {
@@ -35,8 +35,8 @@ function loadData() {
          keys.forEach(function (key) {
              console.log(key);
                  });*/
-        for (var i = 0; i < items.docs.length; i++) {
-            console.log("*** Bla ***" + items.docs[i].snippet + "*** Bla ***");
+        for (var i = 0; i < items.length; i++) {
+            console.log("*** Bla ***" + items[i] + "*** Bla ***");
         }
     });
     /*$.getJSON($url, function (data) {
