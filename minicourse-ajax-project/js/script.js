@@ -35,7 +35,7 @@ function loadData() {
          keys.forEach(function (key) {
              console.log(key);
                  });*/
-        for (var i = 0; i < items[0][0].docs.length; i++) {
+        for (var i = 0; i < items[0].docs.length; i++) {
             console.log("*** Bla ***" + items[0].docs[i].snippet + "*** Bla ***");
         }
     });
