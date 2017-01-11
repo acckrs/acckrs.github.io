@@ -22,19 +22,20 @@ function loadData() {
 
     // YOUR CODE GOES HERE!
     function titleCase(str) {
-        return str
-            .toLowerCase()
-            .split(' ')
-            .map(function (word) {
-                return word[0].toUpperCase() + word.substr(1);
-            })
-            .join(' ');
-    };
+        var splitStr = str.toLowerCase().split(' ');
+        for (var i = 0; i < splitStr.length; i++) {
+            // You do not need to check if i is larger than splitStr length, as your for does that for you
+            // Assign it back to the array
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+        }
+        // Directly return the joined string
+        return splitStr.join(' ');
+    }
 
     $.ajax({
         url: $url,
     }).done(function (result) {
-        $("#nytimes-header").html('New York Times Articles About  ' + titleCase($city)+':');
+        $("#nytimes-header").html('New York Times Articles About  ' + titleCase($city.toString())+':');
         $("#nytimes-articles").html('<ul id="nytimes-articles" class="article-list">')
         for (var i = 0; i < result.response.docs.length; i++) {
             $("#nytimes-articles").append('<li class="article"><a href="' + result.response.docs[i].web_url + '">' + 
