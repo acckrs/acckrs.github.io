@@ -27,12 +27,8 @@ function loadData() {
         $("#nytimes-articles").html('<ul id="nytimes-articles" class="article-list">')
         for (var i = 0; i < result.response.docs.length; i++) {
             $("#nytimes-articles").append('<li class="article"><a href="' + result.response.docs[i].web_url + '">' + 
-                                                                    result.response.docs[i].headline.main + '</a>' +
-                                                                    '<p>'+result.response.docs[i].lead_paragraph+'</p>'+
-
-                                            '</li>'
-                
-                );
+                                                                    result.response.docs[i].headline.main + '</a><p>' +
+                                                                    result.response.docs[i].lead_paragraph+'</p></li>');
                 };
         $("#nytimes-articles").append('</ul>')
     });
