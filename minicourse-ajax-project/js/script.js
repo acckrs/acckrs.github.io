@@ -24,10 +24,10 @@ function loadData() {
     $.ajax({
         url: $url,
     }).done(function (result) {
-            /*for (var i = 0; i < result.response.docs.length; i++) {
+            for (var i = 0; i < result.response.docs.length; i++) {
                 console.log(result.response.docs[i].snippet);
-                };*/
-        console.log(result.response.docs[0].snippet);
+                };
+        //console.log(result.response.docs[0].snippet);
     });
          
      
