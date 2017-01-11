@@ -25,7 +25,7 @@ function loadData() {
         url: $url,
     }).done(function (result) {
         var snippets = [];
-        $.each(result.response.docs[1]["snippet"], function (val) {
+        $.each(result.response.docs[1], function (val) {
             snippets.push([val]);
         });
         for (var i = 0; i < snippets.length; i++) {
