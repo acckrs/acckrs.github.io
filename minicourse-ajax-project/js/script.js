@@ -26,7 +26,7 @@ function loadData() {
     }).done(function (result) {
         var items = [];
         $.each(result, function (key, val) {
-            items.push([val[0]]);
+            items.push([val[0][0]]);
         });
          
         /*result.forEach(function (val) {
@@ -35,9 +35,9 @@ function loadData() {
          keys.forEach(function (key) {
              console.log(key);
                  });*/
-        //for (var i = 0; i < items.length; i++) {
-            console.log(items);
-       // }
+        for (var i = 0; i < items[0].length; i++) {
+            console.log(items[0][i]);
+        }
     });
     /*$.getJSON($url, function (data) {
         var items = [];
