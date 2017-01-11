@@ -11,7 +11,8 @@ function loadData() {
     var $url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     $url += '?' + $.param({
         'api-key': "3ef095bfaadb43e6ab67398da470ed46",
-        'q': $city
+        'q': $city,
+        'sort':"newest"
         
     });
     // clear out old data before new request
