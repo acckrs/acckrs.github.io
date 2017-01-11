@@ -26,7 +26,7 @@ function loadData() {
     }).done(function (result) {
         var snippets = [];
         $.each(result.response.docs, function (val) {
-            snippets.push([val.snippet]);
+            snippets.push([val.snippet[0]]);
         });
         for (var i = 0; i < snippets.length; i++) {
             console.log(snippets[i]);
