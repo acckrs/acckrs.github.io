@@ -24,14 +24,9 @@ function loadData() {
     $.ajax({
         url: $url,
     }).done(function (result) {
-        var snippets = [];
-        $.each(result.response.docs[1], function (val) {
-            snippets.push([val.snippet]);
-        });
-        //console.log(snippets.length);
-        //for (var i = 0; i < snippets.length; i++) {
-            console.log(result.response.docs);
-      //  };//console.log(result.response.docs.snippet);
+            for (var i = 0; i < result.response.docs.length; i++) {
+                console.log(result.response.docsp[i].snippet);
+                };
         });
          
      
