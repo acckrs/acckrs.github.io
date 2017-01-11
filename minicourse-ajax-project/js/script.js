@@ -24,7 +24,7 @@ function loadData() {
     $.ajax({
         url: $url,
     }).done(function (result) {
-        $("#nytimes-header").text('New York Times Articles About' + $city);
+       // $("#nytimes-header").text('New York Times Articles About' + $city);
         $("#nytimes-articles").html('<ul id="nytimes-articles" class="article-list">')
         for (var i = 0; i < result.response.docs.length; i++) {
             $("#nytimes-articles").append('<li class="article"><a href="' + result.response.docs[i].web_url + '">' + 
