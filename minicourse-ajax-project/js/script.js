@@ -43,8 +43,8 @@ function loadData() {
                                                                     result.response.docs[i].lead_paragraph+'</p></li>');
                 };
         $("#nytimes-articles").append('</ul>')
-    }).fail(function (err) {
-        throw err;
+    }).fail(function () {
+        $("#nytimes-header").html('New York Times Articles Could Not Be Loaded');
     });
          
      
