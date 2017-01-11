@@ -24,29 +24,18 @@ function loadData() {
     $.ajax({
         url: $url,
     }).done(function (result) {
-        /*var items = [];
-        $.each(result, function (val) {
-            items.push([val]);*/
-        console.log(result.response.docs[0].snippet);
+        var snippets = [];
+        $.each(result.response.docs, function (val) {
+            snippets.push([val.snippet]);
+        });
+        //console.log(result.response.docs[0].snippet);
         });
          
-        /*result.forEach(function (val) {
-             var keys = Object.keys(val);
-         });
-         keys.forEach(function (key) {
-             console.log(key);
-                 });
-       /* for (var i = 0; i < items[0].length; i++) {
-            console.log(items[0][i]);
-        }
-    });
-    $.getJSON($url, function (data) {
-        var items = [];
-        $.each(data, function (key, val) {
-            items.push("<li id='" + key + "'>" + val + "</li>");
-        });
-    });
-    console.log(items[0]);*/
+     
+    for (var i = 0; i < snippets.length; i++) {
+        console.log(snippets[i]);
+    };
+
 
     $greeting.text('So you want to live in '+ $("#street").val() + ',' + $("#city").val()+'?').css("color","white")
     $body.append('<img class="bgimg" src="http://maps.googleapis.com/maps/api/streetview?size=600x300&location=' + $address + '&key=AIzaSyAXt_KiHM2AXMqnwRCMHSYmjIbb6wgu5BU">')
