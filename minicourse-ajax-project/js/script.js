@@ -28,10 +28,10 @@ function loadData() {
         $.each(result.response.docs[1], function (val) {
             snippets.push([val["snippet"]].toString());
         });
-        console.log(snippets.length);
-        /*for (var i = 0; i < snippets.length; i++) {
+        //console.log(snippets.length);
+        for (var i = 0; i < snippets.length; i++) {
             console.log(snippets[i]);
-        };//console.log(result.response.docs.snippet);*/
+        };//console.log(result.response.docs.snippet);
         });
          
      
