@@ -21,10 +21,20 @@ function loadData() {
     // load streetview
 
     // YOUR CODE GOES HERE!
+    function titleCase(str) {
+        return str
+            .toLowerCase()
+            .split(' ')
+            .map(function (word) {
+                return word[0].toUpperCase() + word.substr(1);
+            })
+            .join(' ');
+    };
+
     $.ajax({
         url: $url,
     }).done(function (result) {
-        $("#nytimes-header").html('New York Times Articles About' + $city+':');
+        $("#nytimes-header").html('New York Times Articles About  ' + titleCase($city)+':');
         $("#nytimes-articles").html('<ul id="nytimes-articles" class="article-list">')
         for (var i = 0; i < result.response.docs.length; i++) {
             $("#nytimes-articles").append('<li class="article"><a href="' + result.response.docs[i].web_url + '">' + 
