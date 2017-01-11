@@ -25,8 +25,8 @@ function loadData() {
         url: $url,
     }).done(function (result) {
         var items = [];
-        $.each(result, function (key, val) {
-            items.push([val[0][0]]);
+        $.each(result, function (val) {
+            items.push([val);
         });
          
         /*result.forEach(function (val) {
