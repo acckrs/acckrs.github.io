@@ -25,7 +25,7 @@ function loadData() {
         url: $url,
     }).done(function (result) {
             for (var i = 0; i < result.response.docs.length; i++) {
-                console.log(result.response.docsp[i].snippet);
+                console.log(result.response.docs[i].snippet);
                 };
         });
          
