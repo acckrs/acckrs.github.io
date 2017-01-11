@@ -30,7 +30,7 @@ function loadData() {
         });
         //console.log(snippets.length);
         //for (var i = 0; i < snippets.length; i++) {
-            console.log(result.response.docs.snippet);
+            console.log(result.response.docs);
       //  };//console.log(result.response.docs.snippet);
         });
          
