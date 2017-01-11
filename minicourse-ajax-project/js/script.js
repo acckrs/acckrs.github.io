@@ -8,7 +8,7 @@ function loadData() {
     var $greeting = $('#greeting');
     var $city = $("#city").val();
     var $address = $("#street").val() + ',' + $("#city").val();
-    var $url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    var $url = "https://api.nrtytimes.com/svc/search/v2/articlesearch.json";
     $url += '?' + $.param({
         'api-key': "3ef095bfaadb43e6ab67398da470ed46",
         'q': $city
@@ -43,6 +43,8 @@ function loadData() {
                                                                     result.response.docs[i].lead_paragraph+'</p></li>');
                 };
         $("#nytimes-articles").append('</ul>')
+    }).fail(function (err) {
+        throw err;
     });
          
      
