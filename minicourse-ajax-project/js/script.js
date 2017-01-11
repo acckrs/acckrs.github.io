@@ -28,13 +28,13 @@ function loadData() {
         $.each(result.response.docs, function (val) {
             snippets.push([val.snippet]);
         });
-        //console.log(result.response.docs[0].snippet);
+        for (var i = 0; i < snippets.length; i++) {
+            console.log(snippets[i]);
+        };//console.log(result.response.docs[0].snippet);
         });
          
      
-    for (var i = 0; i < snippets.length; i++) {
-        console.log(snippets[i]);
-    };
+   
 
 
     $greeting.text('So you want to live in '+ $("#street").val() + ',' + $("#city").val()+'?').css("color","white")
