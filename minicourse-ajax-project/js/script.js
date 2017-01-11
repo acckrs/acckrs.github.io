@@ -24,8 +24,9 @@ function loadData() {
     $.ajax({
         url: $url,
     }).done(function (result) {
-            for (var i = 0; i < result.response.docs.length; i++) {
-                console.log(result.response.docs[i].web_url);
+        //$("#nytimes-articles").html('<ul id="nytimes-articles" class="article-list">')
+        for (var i = 0; i < result.response.docs.length; i++) {
+            console.log('<li class="article"><a href="' + result.response.docs[i].web_url + '">' + result.response.docs[i].headline.main+'</a></li>');
                 };
         //console.log(result.response.docs[0].snippet);
     });
