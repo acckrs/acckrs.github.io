@@ -24,9 +24,10 @@ function loadData() {
     $.ajax({
         url: $url,
     }).done(function (result) {
-        var items = [];
+        /*var items = [];
         $.each(result, function (val) {
-            items.push([val);
+            items.push([val]);*/
+        console.log(val);
         });
          
         /*result.forEach(function (val) {
@@ -35,9 +36,9 @@ function loadData() {
          keys.forEach(function (key) {
              console.log(key);
                  });*/
-        for (var i = 0; i < items[0].length; i++) {
+       /* for (var i = 0; i < items[0].length; i++) {
             console.log(items[0][i]);
-        }
+        }*/
     });
     /*$.getJSON($url, function (data) {
         var items = [];
