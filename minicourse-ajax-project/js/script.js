@@ -35,9 +35,9 @@ function loadData() {
          keys.forEach(function (key) {
              console.log(key);
                  });*/
-        for (var i = 0; i < items.length; i++) {
-            console.log("*** Bla ***" + items[i] + "*** Bla ***");
-        }
+        //for (var i = 0; i < items.length; i++) {
+            console.log(items);
+       // }
     });
     /*$.getJSON($url, function (data) {
         var items = [];
