@@ -35,12 +35,12 @@ function loadData() {
          });
          keys.forEach(function (key) {
              console.log(key);
-                 });*/
+                 });
        /* for (var i = 0; i < items[0].length; i++) {
             console.log(items[0][i]);
-        }*/
+        }
     });
-    /*$.getJSON($url, function (data) {
+    $.getJSON($url, function (data) {
         var items = [];
         $.each(data, function (key, val) {
             items.push("<li id='" + key + "'>" + val + "</li>");
