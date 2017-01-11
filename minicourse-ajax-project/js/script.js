@@ -26,7 +26,7 @@ function loadData() {
     }).done(function (result) {
         var items = [];
         $.each(result, function (key, val) {
-            items.push([val.response.docs.snippet]);
+            items.push([val]);
         });
          
         /*result.forEach(function (val) {
