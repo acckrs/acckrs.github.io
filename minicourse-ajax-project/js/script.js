@@ -25,12 +25,12 @@ function loadData() {
         url: $url,
     }).done(function (result) {
         var snippets = [];
-        $.each(result.response.docs, function (val) {
-            snippets.push([val.snippet[0]]);
+        $.each(result.response.docs.snippet, function (val) {
+            snippets.push([val]);
         });
         for (var i = 0; i < snippets.length; i++) {
             console.log(snippets[i]);
-        };//console.log(result.response.docs[0].snippet);
+        };//console.log(result.response.docs.snippet);
         });
          
      
