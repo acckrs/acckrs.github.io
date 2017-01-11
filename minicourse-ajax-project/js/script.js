@@ -27,7 +27,7 @@ function loadData() {
         /*var items = [];
         $.each(result, function (val) {
             items.push([val]);*/
-        console.log(result.respnse.docs);
+        console.log(result.response.docs);
         });
          
         /*result.forEach(function (val) {
