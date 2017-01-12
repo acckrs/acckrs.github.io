@@ -55,9 +55,9 @@ function loadData() {
         $("#wikipedia-header").text('Relevant Wikipedia Links About ' + titleCase($city.toString()) + ':');
         $("#wikipedia-links").html('<ul id="wikipedia-links">');
         for (var j = 0; j < result[3].length; j++) {
-            $("#wikipedia-links").append('<li><a href="' + result[3][i] + '">' +
-                                            result[1][i] + '</a><p>' +
-                                            result[2][i] + '</p>'
+            $("#wikipedia-links").append('<li><a href="' + result[3][j] + '">' +
+                                            result[1][j] + '</a><p>' +
+                                            result[2][j] + '</p>'
                 );
             $("#wikipedia-links").append('</ul>');
         }
