@@ -48,7 +48,11 @@ function loadData() {
         $("#nytimes-header").html('New York Times Articles Could Not Be Loaded');
     });
          
-     
+    $.ajax({
+        url: $wikiUrl,
+    }).done(function (result) {
+        console.log(result);
+        });
    
 
     console.log($wikiUrl);
