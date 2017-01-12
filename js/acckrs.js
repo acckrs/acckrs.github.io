@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 
         $.ajax({
-            url: "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en",
+            url: "http://api.forismatic.com/api/1.0/?&method=getQuote&format=json&lang=en",
             dataType: "JSONP"
         }).done(function (reponse) {
             console.log(response);
