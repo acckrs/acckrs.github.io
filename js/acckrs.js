@@ -11,7 +11,7 @@ function randomQuote() {
     });
 };
    
-$('#form-container').submit(randomQuote);
+    $("#getMessage").on("click",randomQuote);
     
 
 
