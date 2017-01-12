@@ -4,9 +4,8 @@ $(document).ready(function () {
 
 
         $.ajax({
-            url: "http://api.forismatic.com/api/1.0/?",
-            
-            data: "method=getQuote&format=jsonp&lang=en",
+            url: "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&callback=trt",
+            dataType: "JSONP"
         }).done(function (reponse) {
             console.log(response);
         });
