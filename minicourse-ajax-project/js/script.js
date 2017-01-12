@@ -61,7 +61,9 @@ function loadData() {
                 );
             $("#wikipedia-links").append('</ul>');
         }
-        });
+    }).fail(function () {
+        $("#wikipedia-header").text('Failed to get Wikipedia links about ' + titleCase($city.toString()) + ':');
+    });
    
     $greeting.text('So you want to live in '+ $("#street").val() + ',' + $("#city").val()+'?').css("color","white")
     $body.append('<img class="bgimg" src="http://maps.googleapis.com/maps/api/streetview?size=600x300&location=' + $address + '&key=AIzaSyAXt_KiHM2AXMqnwRCMHSYmjIbb6wgu5BU">')
