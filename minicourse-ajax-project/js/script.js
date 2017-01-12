@@ -56,15 +56,13 @@ function loadData() {
         $("#wikipedia-links").html('<ul id="wikipedia-links">');
         for (var j = 0; j < result[3].length; j++) {
             $("#wikipedia-links").append('<li><a href="' + result[3][j] + '">' +
-                                            result[1][j] + '</a>' 
+                                            result[1][j] + '</a><p>'+
+                                            result[2][j] + '</p>'
                 );
             $("#wikipedia-links").append('</ul>');
         }
-        console.log(result[3][0]);
         });
    
-
-    console.log($wikiUrl);
     $greeting.text('So you want to live in '+ $("#street").val() + ',' + $("#city").val()+'?').css("color","white")
     $body.append('<img class="bgimg" src="http://maps.googleapis.com/maps/api/streetview?size=600x300&location=' + $address + '&key=AIzaSyAXt_KiHM2AXMqnwRCMHSYmjIbb6wgu5BU">')
     return false;
