@@ -3,13 +3,12 @@ $(document).ready(function () {
         $.ajax({
             url: "http://api.forismatic.com/api/1.0/?",
             dataType: "jsonp",
-            data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+            data: "method=getQuote&format=jsonp&lang=en&callback=wiki",
             success: function (response) {
-                $(".message").html("<p id='random-quote'>" + response.quoteText + "</p>");
+              
 
-                /* $("#quoteAuthor").html("<p id='quoteAuthor'>" + response.quoteAuthor + " </p>");
-                $("#tweet").attr("href", "http://twitter.com/home/?status=" + response.quoteText +
-                  ' (' + response.quoteAuthor + ')');*/
+                console.log(response);
+
             }
         });
     }
