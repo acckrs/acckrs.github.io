@@ -47,9 +47,9 @@ function loadData() {
     }).fail(function () {
         $("#nytimes-header").html('New York Times Articles Could Not Be Loaded');
     });
-    var wikiRequestTimeout = setTimeout(function () {
+    /*var wikiRequestTimeout = setTimeout(function () {
                   $("#wikipedia-links").text('Failed to get Wikipedia links about ' + titleCase($city.toString()) + ':');
-             }, 8000);
+             }, 8000);*/
     $.ajax({
         url: $wikiUrl,
         dataType:"JSONP"
@@ -63,10 +63,10 @@ function loadData() {
                 );
             $("#wikipedia-links").append('</ul>');
         }
-        clearTimeout(wikiRequestTimeout);
-    })//.fail(function () {
-       // $("#wikipedia-header").text('Failed to get Wikipedia links about ' + titleCase($city.toString()) + ':');
-    // })
+        //clearTimeout(wikiRequestTimeout);
+    }).fail(function () {
+       $("#wikipedia-header").text('Failed to get Wikipedia links about ' + titleCase($city.toString()) + ':');
+    })
     ;
    
     $greeting.text('So you want to live in '+ $("#street").val() + ',' + $("#city").val()+'?').css("color","white")
