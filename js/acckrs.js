@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
     function randomQuote() {
-        var url = "http://api.forismatic.com/api/1.0/";
+        var $url = "http://api.forismatic.com/api/1.0/";
         $url += '?' + $.param({
             'method': 'getQuote',
             'format': 'jsonp',
