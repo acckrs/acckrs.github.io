@@ -8,8 +8,9 @@ function loadData() {
     var $greeting = $('#greeting');
     var $city = $("#city").val();
     var $address = $("#street").val() + ',' + $("#city").val();
-    var $url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-    $url += '?' + $.param({
+    var $nytUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&inprop=url&titles=" + $city;
+    $nytUrl += '?' + $.param({
         'api-key': "3ef095bfaadb43e6ab67398da470ed46",
         'q': $city,
         'sort':"newest"
@@ -25,8 +26,7 @@ function loadData() {
     function titleCase(str) {
         var splitStr = str.toLowerCase().split(' ');
         for (var i = 0; i < splitStr.length; i++) {
-            // You do not need to check if i is larger than splitStr length, as your for does that for you
-            // Assign it back to the array
+             // Assign it back to the array
             splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
         }
         // Directly return the joined string
@@ -34,7 +34,7 @@ function loadData() {
     }
 
     $.ajax({
-        url: $url,
+        url: $nytUrl,
     }).done(function (result) {
         $("#nytimes-header").html('New York Times Articles About  ' + titleCase($city.toString())+':');
         $("#nytimes-articles").html('<ul id="nytimes-articles" class="article-list">')
@@ -51,7 +51,7 @@ function loadData() {
      
    
 
-
+    console.log($wikiUrl);
     $greeting.text('So you want to live in '+ $("#street").val() + ',' + $("#city").val()+'?').css("color","white")
     $body.append('<img class="bgimg" src="http://maps.googleapis.com/maps/api/streetview?size=600x300&location=' + $address + '&key=AIzaSyAXt_KiHM2AXMqnwRCMHSYmjIbb6wgu5BU">')
     return false;
