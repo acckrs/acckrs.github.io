@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
     function randomQuote() {
 
 
@@ -13,6 +13,6 @@ $(document).ready(function () {
    
     $("#getMessage").click(randomQuote);
     
-});
+
 
 
