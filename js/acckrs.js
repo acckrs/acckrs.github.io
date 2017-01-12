@@ -15,6 +15,7 @@ $(document).ready(function () {
         }).done(function (response) {
             $("#quoteText").text(response.quoteText);
             $("#quoteAuthor").text(response.quoteAuthor);
+            console.log(response.quoteText.toString());
             //
         });
     };
