@@ -52,7 +52,7 @@ function loadData() {
         url: $wikiUrl,
         dataType:"JSONP"
     }).done(function (result) {
-        console.log(result.query.pages[0].canonicalurl);
+        console.log(result.query.pages[0]);
         });
    
 
