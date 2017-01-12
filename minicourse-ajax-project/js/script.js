@@ -9,7 +9,7 @@ function loadData() {
     var $city = $("#city").val();
     var $address = $("#street").val() + ',' + $("#city").val();
     var $nytUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-    var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&inprop=url&titles=" + $city;
+    var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&inprop=url&callback=wikiCallback&titles=" + $city;
     $nytUrl += '?' + $.param({
         'api-key': "3ef095bfaadb43e6ab67398da470ed46",
         'q': $city,
