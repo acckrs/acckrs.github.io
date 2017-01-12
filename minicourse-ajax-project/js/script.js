@@ -52,7 +52,7 @@ function loadData() {
         url: $wikiUrl,
         dataType:"JSONP"
     }).done(function (result) {
-        console.log(result);
+        console.log(result[3][0]);
         });
    
 
