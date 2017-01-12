@@ -8,7 +8,8 @@ $(document).ready(function () {
             dataType: "JSONP"
         }).done(function (response) {
             $("#quoteText").text(response.quoteText);
-           $("#quoteAuthor").text(response.quoteAuthor);
+            $("#quoteAuthor").text(response.quoteAuthor);
+            //
         });
     };
 
