@@ -7,7 +7,7 @@ $(document).ready(function () {
             'format': 'jsonp',
             'lang': 'en'
             
-        })+'jsonp=?';
+        })+'&jsonp=?';
 
         $.ajax({
             url: $url,
