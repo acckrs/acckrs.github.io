@@ -50,6 +50,7 @@ function loadData() {
          
     $.ajax({
         url: $wikiUrl,
+        dataType:"JSONP"
     }).done(function (result) {
         console.log(result);
         });
