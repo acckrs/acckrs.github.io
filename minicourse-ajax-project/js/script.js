@@ -52,6 +52,15 @@ function loadData() {
         url: $wikiUrl,
         dataType:"JSONP"
     }).done(function (result) {
+        $("#wikipedia-header").text('Relevant Wikipedia Links About ' + titleCase($city.toString()) + ':');
+        $("#wikipedia-links").html('<ul id="wikipedia-links">');
+        for (var j = 0; j < result[3].length; j++) {
+            $("#wikipedia-links").append('<li><a href="' + result[3][i] + '">' +
+                                            result[1][i] + '</a><p>' +
+                                            result[2][i] + '</p>'
+                );
+            $("#wikipedia-links").append('</ul>');
+        }
         console.log(result[3][0]);
         });
    
