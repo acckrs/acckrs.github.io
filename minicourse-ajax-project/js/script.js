@@ -56,8 +56,7 @@ function loadData() {
         $("#wikipedia-links").html('<ul id="wikipedia-links">');
         for (var j = 0; j < result[3].length; j++) {
             $("#wikipedia-links").append('<li><a href="' + result[3][j] + '">' +
-                                            result[1][j] + '</a><p>' +
-                                            result[2][j] + '</p>'
+                                            result[1][j] + '</a>' 
                 );
             $("#wikipedia-links").append('</ul>');
         }
