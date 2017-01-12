@@ -11,7 +11,7 @@ function randomQuote() {
     });
 };
    
-    $("#getMessage").click(randomQuote);
+    $("#getMessage").on("click",randomQuote);
     
 
 
