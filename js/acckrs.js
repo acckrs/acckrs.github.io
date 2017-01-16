@@ -21,7 +21,9 @@ $(document).ready(function () {
         });
     };
     function getLocation() {
-        console.log(navigator.geolocation.getCurrentPosition.coords.latitude + ".........." + navigator.geolocation.getCurrentPosition.coords.longitude);
+        navigator.geolocation.getCurrentPosition(function (position) {
+            console.log(position.coords.latitude + ".........." + position.coords.longitude);
+        });
     };
 
     $("#getNewQuote").on("click", randomQuote);
