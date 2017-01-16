@@ -20,10 +20,12 @@ $(document).ready(function () {
             //
         });
     };
-
+    function getLocation() {
+        console.log(navigator.geolocation.getCurrentPosition.coords.lattitude + ".........." + navigator.geolocation.getCurrentPosition.coords.longitude);
+    };
 
     $("#getNewQuote").on("click", randomQuote);
-  
+    $("#checkPosition").on("click", getLocation);
 });
     
 
