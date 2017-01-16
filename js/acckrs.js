@@ -21,26 +21,9 @@ $(document).ready(function () {
         });
     };
 
-   /* function tweetQuote() {
-        var $url = "http://api.forismatic.com/api/1.0/";
-        $url += '?&' + $.param({
-            'method': 'getQuote',
-            'format': 'jsonp',
-            'lang': 'en'
-
-        }) + '&jsonp=?';
-
-        $.ajax({
-            url: $url,
-            dataType: "JSONP"
-        }).done(function (response) {
-           
-            console.log(response.quoteText.toString());
-         });
-    };*/
 
     $("#getNewQuote").on("click", randomQuote);
-  //  $("#tweetQuote").on("click", tweetQuote);
+  
 });
     
 
