@@ -24,7 +24,7 @@ $(document).ready(function () {
         $lat= position.coords.latitude;
         $long= position.coords.longitude;
         console.log($lat + ' +++++++ ' + $long);
-        $weatherUrl = 'api.openweathermap.org/data/2.5/weather?APPID=1604ef7d90e80da230c66c3f88530623&lat=' + $lat + '&lon=' + $long + '';
+        $weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?APPID=1604ef7d90e80da230c66c3f88530623&lat=' + $lat + '&lon=' + $long + '';
 
         $.ajax({
             url: $weatherUrl,
