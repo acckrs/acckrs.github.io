@@ -25,12 +25,13 @@ $(document).ready(function () {
       //      console.log(position.coords.latitude + ".........." + position.coords.longitude);
         //});
     // };
-    var $lat = '';
-    var $long='';
+   // var $lat = '';
+   // var $long='';
     navigator.geolocation.getCurrentPosition(function (position) {
         $lat= position.coords.latitude;
         $long= position.coords.longitude;
-        console.log($lat+' +++++++ '+ $long);
+        console.log($lat + ' +++++++ ' + $long);
+        return $lat, $long;
     });
     console.log('Latitude is: '+$lat + ' and the longitude is: ' + $long);
     $("#getNewQuote").on("click", randomQuote);
