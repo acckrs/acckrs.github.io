@@ -32,7 +32,7 @@ $(document).ready(function () {
         $long= position.coords.longitude;
         //96
     });
-    console.log('Latitude is: '+$lat + ' and the longitude is: ' + $longe;
+    console.log('Latitude is: '+$lat + ' and the longitude is: ' + $long);
     $("#getNewQuote").on("click", randomQuote);
    // $("#checkPosition").on("click", getLocation);
 });
