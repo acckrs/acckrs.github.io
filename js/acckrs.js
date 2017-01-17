@@ -29,7 +29,7 @@ $(document).ready(function () {
     var $long='';
     navigator.geolocation.getCurrentPosition(function (position) {
         $lat= position.coords.latitude;
-        $long= position.coords.longitude;
+        $long= position.coords.longitude;//
         //96
     });
     console.log('Latitude is: '+$lat + ' and the longitude is: ' + $long);
