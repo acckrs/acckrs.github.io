@@ -25,14 +25,14 @@ $(document).ready(function () {
       //      console.log(position.coords.latitude + ".........." + position.coords.longitude);
         //});
     // };
-    var latitude = '';
-    var longitude = '';
+    var $lat = '';
+    var $long='';
     navigator.geolocation.getCurrentPosition(function (position) {
-        latitude = position.coords.latitude.toString();
-        longitude = position.coords.longitude.toString();
+        $lat= position.coords.latitude;
+        $long= position.coords.longitude;
         //96
     });
-    console.log('Latitude is: '+latitude + ' and the longitude is: ' + longitude);
+    console.log('Latitude is: '+$lat + ' and the longitude is: ' + $longe;
     $("#getNewQuote").on("click", randomQuote);
    // $("#checkPosition").on("click", getLocation);
 });
