@@ -29,8 +29,8 @@ $(document).ready(function () {
     var $long='';
     navigator.geolocation.getCurrentPosition(function (position) {
         $lat= position.coords.latitude;
-        $long= position.coords.longitude;//
-        //96
+        $long= position.coords.longitude;
+       
     });
     console.log('Latitude is: '+$lat + ' and the longitude is: ' + $long);
     $("#getNewQuote").on("click", randomQuote);
