@@ -30,7 +30,7 @@ $(document).ready(function () {
     navigator.geolocation.getCurrentPosition(function (position) {
         $lat= position.coords.latitude;
         $long= position.coords.longitude;
-        return $lat, $long;
+        console.log($lat+' +++++++ '+ $long);
     });
     console.log('Latitude is: '+$lat + ' and the longitude is: ' + $long);
     $("#getNewQuote").on("click", randomQuote);
