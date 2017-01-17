@@ -30,7 +30,7 @@ $(document).ready(function () {
     navigator.geolocation.getCurrentPosition(function (position) {
         latitude = position.coords.latitude.toString();
         longitude = position.coords.longitude.toString();
-
+        //
     });
     cosole.log(latitude + '.....' + longitude);
     $("#getNewQuote").on("click", randomQuote);
