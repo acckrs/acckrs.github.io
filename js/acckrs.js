@@ -24,10 +24,15 @@ $(document).ready(function () {
     //    navigator.geolocation.getCurrentPosition(function (position) {
       //      console.log(position.coords.latitude + ".........." + position.coords.longitude);
         //});
-   // };
+    // };
+    var latitude = '';
+    var longitude = '';
     navigator.geolocation.getCurrentPosition(function (position) {
-             console.log(position.coords.latitude + ".........." + position.coords.longitude);
-        });
+        latitude = position.coords.latitude.toString();
+        longitude = position.coords.longitude.toString();
+
+    });
+    cosole.log(latitude + '.....' + longitude);
     $("#getNewQuote").on("click", randomQuote);
    // $("#checkPosition").on("click", getLocation);
 });
