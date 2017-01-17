@@ -16,25 +16,23 @@ $(document).ready(function () {
             $("#quoteText").text(response.quoteText);
             $("#quoteAuthor").text(response.quoteAuthor);
             $("#tweetQuote").attr("href", "http://twitter.com/home/?status=" + response.quoteText + '(' + response.quoteAuthor + ')');
-            console.log(response.quoteText.toString());
-            //
-        });
+            //console.log(response.quoteText.toString());
+         });
     };
-   // function getLocation() {
-    //    navigator.geolocation.getCurrentPosition(function (position) {
-      //      console.log(position.coords.latitude + ".........." + position.coords.longitude);
-        //});
-    // };
-   // var $lat = '';
-   // var $long='';
+      
     navigator.geolocation.getCurrentPosition(function (position) {
         $lat= position.coords.latitude;
         $long= position.coords.longitude;
         console.log($lat + ' +++++++ ' + $long);
-        return $lat, $long;
+        $weatherUrl = 'api.openweathermap.org/data/2.5/weather?APPID=1604ef7d90e80da230c66c3f88530623&lat=' + $lat + '&lon=' + lon + '';
+
+        $.ajax({
+            url: $weatherUrl,
+        }).done(function (response) {
+            console.log(response);
+            });
     });
-    console.log('Latitude is: '+$lat + ' and the longitude is: ' + $long);
-    $("#getNewQuote").on("click", randomQuote);
+      $("#getNewQuote").on("click", randomQuote);
    // $("#checkPosition").on("click", getLocation);
 });
     
