@@ -30,9 +30,9 @@ $(document).ready(function () {
     navigator.geolocation.getCurrentPosition(function (position) {
         $lat= position.coords.latitude;
         $long= position.coords.longitude;
-        //96
+       
     });
-    console.log('Latitude is: '+$lat + ' and the longitude is: ' + $longe;
+    console.log('Latitude is: '+$lat + ' and the longitude is: ' + $long);
     $("#getNewQuote").on("click", randomQuote);
    // $("#checkPosition").on("click", getLocation);
 });
