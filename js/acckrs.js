@@ -20,14 +20,16 @@ $(document).ready(function () {
             //
         });
     };
-    function getLocation() {
+    /*function getLocation() {
         navigator.geolocation.getCurrentPosition(function (position) {
             console.log(position.coords.latitude + ".........." + position.coords.longitude);
         });
-    };
+    };*/
+    navigator.geolocation.getCurrentPosition(function (position) {
+        console.log(position.coords.latitude + ".........." + position.coords.longitude)
 
     $("#getNewQuote").on("click", randomQuote);
-    $("#checkPosition").on("click", getLocation);
+    //$("#checkPosition").on("click", getLocation);
 });
     
 
