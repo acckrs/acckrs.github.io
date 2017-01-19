@@ -36,7 +36,7 @@ $(document).ready(function () {
             url: $weatherUrl,
         }).done(function (response) {
             console.log('temperatura u C: ' + response.main.temp);
-            console.log('temperatura u F: ' + response.main.temp*9.5+32);
+            console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
     });
       $("#getNewQuote").on("click", randomQuote);
