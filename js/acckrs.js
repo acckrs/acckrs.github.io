@@ -39,6 +39,7 @@ $(document).ready(function () {
             console.log(response);
             console.log($iconUrl);
             console.log('temperatura u C: ' + response.main.temp);
+            $("#tempC").text(response.main.temp + 'C');
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
     });
