@@ -6,7 +6,7 @@ $(document).ready(function () {
             'method': 'getQuote',
             'format': 'jsonp',
             'lang': 'en',
-            'callback':'?'
+            'callback':'test'
         })+'&jsonp=?';
 
         $.ajax({
@@ -32,7 +32,7 @@ $(document).ready(function () {
             'APPID': '1604ef7d90e80da230c66c3f88530623',
             'lat': $lat,
             'lon': $long,
-            'callback': '?'
+            'callback': 'test'
         })
         $iconUrl = 'http://openweathermap.org/img/w/';
         $.ajax({
