@@ -38,7 +38,7 @@ $(document).ready(function () {
             $iconUrl += response.weather[0].icon + '.png';
             console.log(response);
             console.log($iconUrl);
-            console.log('temperatura u C: ' + response.main.temp);
+            console.log('temperatura u C: ' + Math.round(response.main.temp));
             $("#tempC").text(response.main.temp + 'C');
             $("#weatherIcon").attr("src", $iconUrl);
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
