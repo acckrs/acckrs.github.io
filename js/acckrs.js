@@ -24,12 +24,19 @@ $(document).ready(function () {
         $lat= position.coords.latitude;
         $long= position.coords.longitude;
         console.log($lat + ' +++++++ ' + $long);
-        $weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=1604ef7d90e80da230c66c3f88530623&lat=' + $lat + '&lon=' + $long + '';
-
+       // $weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=1604ef7d90e80da230c66c3f88530623&lat=' + $lat + '&lon=' + $long + '';
+        $weatherUrl = 'http://api.openweathermap.org/data/2.5/weather';
+        $weatherUrl += '?&' + $ / param({
+            'units': 'metric',
+            'APPID': '1604ef7d90e80da230c66c3f88530623',
+            'lat': $lat,
+            'lon': $long
+           })
         $.ajax({
             url: $weatherUrl,
         }).done(function (response) {
-            console.log(response.main.temp);
+            console.log('temperatura u C: ' + response.main.temp);
+            console.log('temperatura u F: ' + response.main.temp*9.5+32);
             });
     });
       $("#getNewQuote").on("click", randomQuote);
