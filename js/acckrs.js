@@ -26,7 +26,7 @@ $(document).ready(function () {
         console.log($lat + ' +++++++ ' + $long);
        // $weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=1604ef7d90e80da230c66c3f88530623&lat=' + $lat + '&lon=' + $long + '';
         $weatherUrl = 'http://api.openweathermap.org/data/2.5/weather';
-        $weatherUrl += '?&' + $ / param({
+        $weatherUrl += '?&' + $.param({
             'units': 'metric',
             'APPID': '1604ef7d90e80da230c66c3f88530623',
             'lat': $lat,
