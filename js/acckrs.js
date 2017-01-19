@@ -30,11 +30,13 @@ $(document).ready(function () {
             'APPID': '1604ef7d90e80da230c66c3f88530623',
             'lat': $lat,
             'lon': $long
-           })
+        })
+        $iconUrl = 'http://openweathermap.org/img/w/';
         $.ajax({
             url: $weatherUrl,
         }).done(function (response) {
-            console.log(response);
+            $iconUrl += response.weather.icon + '.png';
+            console.log($iconUrl);
             console.log('temperatura u C: ' + response.main.temp);
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
