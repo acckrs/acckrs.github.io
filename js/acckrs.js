@@ -29,7 +29,7 @@ $(document).ready(function () {
         $.ajax({
             url: $weatherUrl,
         }).done(function (response) {
-            console.log(response);
+            console.log(response.main.temp);
             });
     });
       $("#getNewQuote").on("click", randomQuote);
