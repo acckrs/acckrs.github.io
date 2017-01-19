@@ -5,14 +5,15 @@ $(document).ready(function () {
         $url += '?&' + $.param({
             'method': 'getQuote',
             'format': 'jsonp',
-            'lang': 'en'
-            
+            'lang': 'en',
+            'callback':'?'
         })+'&jsonp=?';
 
         $.ajax({
             url: $url,
             dataType: "JSONP",
-            type:"GET"
+            type: "GET",
+            
         }).done(function (response) {
             $("#quoteText").text(response.quoteText);
             $("#quoteAuthor").text(response.quoteAuthor);
@@ -30,7 +31,8 @@ $(document).ready(function () {
             'units': 'metric',
             'APPID': '1604ef7d90e80da230c66c3f88530623',
             'lat': $lat,
-            'lon': $long
+            'lon': $long,
+            'callback': '?'
         })
         $iconUrl = 'http://openweathermap.org/img/w/';
         $.ajax({
