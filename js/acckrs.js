@@ -11,7 +11,8 @@ $(document).ready(function () {
 
         $.ajax({
             url: $url,
-            dataType: "JSONP"
+            dataType: "JSONP",
+            type:GET
         }).done(function (response) {
             $("#quoteText").text(response.quoteText);
             $("#quoteAuthor").text(response.quoteAuthor);
@@ -34,6 +35,7 @@ $(document).ready(function () {
         $iconUrl = 'http://openweathermap.org/img/w/';
         $.ajax({
             url: $weatherUrl,
+            type:GET
         }).done(function (response) {
             $iconUrl += response.weather[0].icon + '.png';
             console.log(response);
