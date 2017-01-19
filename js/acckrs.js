@@ -35,7 +35,7 @@ $(document).ready(function () {
         $.ajax({
             url: $weatherUrl,
         }).done(function (response) {
-            $iconUrl += response.weather.icon + '.png';
+            $iconUrl += response.weather[0].icon + '.png';
             console.log(response);
             console.log($iconUrl);
             console.log('temperatura u C: ' + response.main.temp);
