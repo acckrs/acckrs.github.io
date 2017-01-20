@@ -16,16 +16,24 @@ $(document).ready(function () {
             $("#quoteText").text(response.quoteText);
             $("#quoteAuthor").text(response.quoteAuthor);
             $("#tweetQuote").attr("href", "http://twitter.com/home/?status=" + response.quoteText + '(' + response.quoteAuthor + ')');
-            console.log(response.quoteText.toString());
-            //
-        });
+            //console.log(response.quoteText.toString());
+         });
     };
-    function getLocation() {
-        console.log(navigator.geolocation.getCurrentPosition.coords.lattitude + ".........." + navigator.geolocation.getCurrentPosition.coords.longitude);
-    };
+      
+    navigator.geolocation.getCurrentPosition(function (position) {
+        $lat= position.coords.latitude;
+        $long= position.coords.longitude;
+        console.log($lat + ' +++++++ ' + $long);
+        $weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=1604ef7d90e80da230c66c3f88530623&lat=' + $lat + '&lon=' + $long + '';
 
-    $("#getNewQuote").on("click", randomQuote);
-    $("#checkPosition").on("click", getLocation);
+        $.ajax({
+            url: $weatherUrl,
+        }).done(function (response) {
+            console.log(response.main.temp);
+            });
+    });
+      $("#getNewQuote").on("click", randomQuote);
+   // $("#checkPosition").on("click", getLocation);
 });
     
 
