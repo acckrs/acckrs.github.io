@@ -40,9 +40,10 @@ $(document).ready(function () {
             type:"GET"
         }).done(function (response) {
             $iconUrl += response.weather[0].icon + '.png';
+            $tempC = Math.round(response.main.temp) + '°C  ' + response.weather[0].description;
             console.log(response);
             console.log('temperatura u C: ' + Math.round(response.main.temp));
-            $("#tempC").text(Math.round(response.main.temp) + '°C  ' + response.weather[0].description);
+            $("#tempC").text($tempC);
             //$("#weatherIcon").attr("src", $iconUrl);
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
