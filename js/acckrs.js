@@ -41,13 +41,13 @@ $(document).ready(function () {
         }).done(function (response) {
             $iconUrl += response.weather[0].icon + '.png';
             console.log(response);
-            console.log($iconUrl);
             console.log('temperatura u C: ' + Math.round(response.main.temp));
-            $("#tempC").text(Math.round(response.main.temp) + 'C');
-            $("#weatherIcon").attr("src", $iconUrl);
+            $("#tempC").text(Math.round(response.main.temp) + 'C  ' + response.weather[0].description);
+            //$("#weatherIcon").attr("src", $iconUrl);
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
     });
+   // $("#weatherIcon").on("click", $iconUrl);
       $("#getNewQuote").on("click", randomQuote);
    // $("#checkPosition").on("click", getLocation);
 });
