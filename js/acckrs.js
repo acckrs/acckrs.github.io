@@ -40,8 +40,8 @@ $(document).ready(function () {
             type:"GET"
         }).done(function (response) {
             $temp = {
-                "c": "response.main.temp + '° C'",
-                "f": "response.main.temp*9/5-32 + '° F'"
+                "c": response.main.temp + ' C',
+                "f": response.main.temp*9/5-32 + '° F'
             };
             $iconUrl += response.weather[0].icon + '.png';
             //$tempC = Math.round(response.main.temp) + "C  " + response.weather[0].description;
