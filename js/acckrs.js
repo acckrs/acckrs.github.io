@@ -39,11 +39,15 @@ $(document).ready(function () {
             url: $weatherUrl,
             type:"GET"
         }).done(function (response) {
+            $temp = {
+                "c": "response.main.temp + '° C'",
+                "f": "response.main.temp*9/5-32 + '° F'"
+            };
             $iconUrl += response.weather[0].icon + '.png';
-            $tempC = Math.round(response.main.temp) + "°C  " + response.weather[0].description;
+            //$tempC = Math.round(response.main.temp) + "C  " + response.weather[0].description;
             console.log(response);
             console.log('temperatura u C: ' + Math.round(response.main.temp));
-            $("#tempC").text($tempC);
+            $("#tempC").text($tempC['c']);
             //$("#weatherIcon").attr("src", $iconUrl);
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
