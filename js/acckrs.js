@@ -41,7 +41,7 @@ $(document).ready(function () {
         }).done(function (response) {
             $temp = {
                 "c": Math.round(response.main.temp) + ' C  ' + response.weather[0].description,
-                "f": Math.round(response.main.temp * 9 / 5 - 32) + ' F  ' + response.weather[0].description
+                "f": Math.round(response.main.temp * 9 / 5 + 32) + ' F  ' + response.weather[0].description
             };
             $iconUrl += response.weather[0].icon + '.png';
             //$tempC = Math.round(response.main.temp) + "C  " + response.weather[0].description;
