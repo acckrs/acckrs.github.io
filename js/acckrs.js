@@ -40,22 +40,32 @@ $(document).ready(function () {
             type:"GET"
         }).done(function (response) {
             $temp = {
-                "c": Math.round(response.main.temp) + ' C',
-                "f": Math.round(response.main.temp) * 9 / 5 - 32 + '° F'
+                "c": Math.round(response.main.temp) + ' C' + response.weather[0].description,
+                "f": Math.round(response.main.temp) * 9 / 5 - 32 + '° F  ' + response.weather[0].description
             };
             $iconUrl += response.weather[0].icon + '.png';
             //$tempC = Math.round(response.main.temp) + "C  " + response.weather[0].description;
             console.log(response);
             console.log('temperatura u C: ' + Math.round(response.main.temp));
             $("#tempC").text($temp['c']);
-            $("#weatherDesc").text(response.weather[0].description);
-            //$("#weatherIcon").attr("src", $iconUrl);
+            $("#weatherIcon").attr("src", $iconUrl);
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
     });
    // $("#weatherIcon").on("click", $iconUrl);
       $("#getNewQuote").on("click", randomQuote);
-   // $("#checkPosition").on("click", getLocation);
+    // $("#checkPosition").on("click", getLocation);
+      $("#tempC").on('click', function () {
+          var current = $(this).data('nexttemp');
+          $("#tempC").text(temp[current]);
+
+          if (current == 'c') {
+              $(this).data('nexttemp', 'f');
+              return;
+          }
+          $(this).data('nexttemp', 'c');
+
+      });
 });
     
 
