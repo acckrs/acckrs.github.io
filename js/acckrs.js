@@ -42,7 +42,7 @@ $(document).ready(function () {
             $iconUrl += response.weather[0].icon + '.png';
             console.log(response);
             console.log('temperatura u C: ' + Math.round(response.main.temp));
-            $("#tempC").text(Math.round(response.main.temp) + '&#8451;   ' + response.weather[0].description);
+            $("#tempC").text(Math.round(response.main.temp) + "&#8451;"    + response.weather[0].description);
             //$("#weatherIcon").attr("src", $iconUrl);
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
