@@ -47,7 +47,7 @@ $(document).ready(function () {
             //$tempC = Math.round(response.main.temp) + "C  " + response.weather[0].description;
             console.log(response);
             console.log('temperatura u C: ' + Math.round(response.main.temp));
-            $("#tempC").text($tempC['c']);
+            $("#tempC").text($temp['c']);
             //$("#weatherIcon").attr("src", $iconUrl);
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
