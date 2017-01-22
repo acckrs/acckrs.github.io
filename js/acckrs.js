@@ -58,7 +58,7 @@ $(document).ready(function () {
       $("#tempC").on('click', function () {
           var current = $(this).data('nexttemp');
           $("#tempC").text($temp[current]);
-
+          //
           if (current == 'c') {
               $(this).data('nexttemp', 'f');
               return;
