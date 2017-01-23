@@ -38,4 +38,4 @@ function searchWiki() {
     return false;
 };
 
-$('#search-input').submit(searchWiki);
+$('#search-form').submit(searchWiki);
