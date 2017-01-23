@@ -5,7 +5,7 @@ function searchWiki() {
     var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&prop=info&inprop=url&callback=wikiCallback&search=" + $searchString;
 
     // clear out old data before new request
-    // $wikiElem.text("");
+     $wikiElem.text("");
 
 
 
@@ -25,7 +25,7 @@ function searchWiki() {
                 );
             $("#wikipedia-links").append('</ul>');
         }
-        clearTimeout(wikiRequestTimeout);
+        
     });
 
     return false;
