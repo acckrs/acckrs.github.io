@@ -1,15 +1,15 @@
 
 function searchWiki() {
-    var $searchString = $("#searchText");
+    var $searchString = $("#searchText").val();
     var $wikiElem=$("#wikipedia-links");
     var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&prop=info&inprop=url&callback=wikiCallback&search=" + $searchString;
 
     // clear out old data before new request
-    $wikiElem.text("");
-    $nytElem.text("");
+   // $wikiElem.text("");
+ 
   
     
-    function titleCase(str) {
+  /*  function titleCase(str) {
         var splitStr = str.toLowerCase().split(' ');
         for (var i = 0; i < splitStr.length; i++) {
              // Assign it back to the array
@@ -18,7 +18,7 @@ function searchWiki() {
         // Directly return the joined string
         return splitStr.join(' ');
     }
-
+    */
  
     $.ajax({
         url: $wikiUrl,
