@@ -31,4 +31,4 @@ function searchWiki() {
     return false;
 };
 
-$('#search-form').submit(searchWiki);
+$('#search-form').submit(searchWiki());
