@@ -6,8 +6,7 @@ $(document).ready(function () {
             'method': 'getQuote',
             'format': 'jsonp',
             'lang': 'en'
-            //'callback':'test'
-        })+'&jsonp=?';
+           })+'&jsonp=?';
 
         $.ajax({
             url: $url,
@@ -20,8 +19,7 @@ $(document).ready(function () {
             $("#quoteText").text(response.quoteText);
             $("#quoteAuthor").text(response.quoteAuthor);
             $("#tweetQuote").attr("href", "http://twitter.com/home/?status=" + response.quoteText + '(' + response.quoteAuthor + ')');
-            //console.log(response.quoteText.toString());
-         });
+          });
     };
       
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -34,8 +32,7 @@ $(document).ready(function () {
             'APPID': '1604ef7d90e80da230c66c3f88530623',
             'lat': $lat,
             'lon': $long
-            //'callback': 'test'
-        })
+        });
         $iconUrl = 'http://openweathermap.org/img/w/';
         $.ajax({
             url: $weatherUrl,
@@ -47,7 +44,6 @@ $(document).ready(function () {
                 "f": Math.round(response.main.temp * 9 / 5 + 32) + ' F  ' + response.weather[0].description
             };
             $iconUrl += response.weather[0].icon + '.png';
-            //$tempC = Math.round(response.main.temp) + "C  " + response.weather[0].description;
             console.log(response);
             console.log('temperatura u C: ' + Math.round(response.main.temp));
             $("#tempC").text($temp['c']);
@@ -55,13 +51,10 @@ $(document).ready(function () {
             console.log('temperatura u F: ' + response.main.temp*9/5+32);
             });
     });
-   // $("#weatherIcon").on("click", $iconUrl);
-      $("#getNewQuote").on("click", randomQuote);
-    // $("#checkPosition").on("click", getLocation);
-      $("#tempC").on('click', function () {
+    $("#getNewQuote").on("click", randomQuote);
+        $("#tempC").on('click', function () {
           var current = $(this).data('nexttemp');
           $("#tempC").text($temp[current]);
-          //
           if (current == 'c') {
               $(this).data('nexttemp', 'f');
               return;
