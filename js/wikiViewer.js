@@ -14,6 +14,7 @@ function searchWiki() {
         url: $wikiUrl,
         dataType: "JSONP"
     }).done(function (result) {
+        console.log($wikiUrl);
         console.log(result);
         console.log($searchString);
         console.log("Nista");
@@ -31,4 +32,4 @@ function searchWiki() {
     return false;
 };
 
-$('#search-form').submit(searchWiki());
+$('#submit-btn').click(searchWiki());
