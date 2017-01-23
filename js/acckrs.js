@@ -25,7 +25,6 @@ $(document).ready(function () {
     navigator.geolocation.getCurrentPosition(function (position) {
         $lat= position.coords.latitude;
         $long= position.coords.longitude;
-        console.log($lat + ' +++++++ ' + $long);
         $weatherUrl = 'http://api.openweathermap.org/data/2.5/weather';
         $weatherUrl += '?&' + $.param({
             'units': 'metric',
@@ -44,12 +43,9 @@ $(document).ready(function () {
                 "f": Math.round(response.main.temp * 9 / 5 + 32) + ' F  ' + response.weather[0].description
             };
             $iconUrl += response.weather[0].icon + '.png';
-            console.log(response);
-            console.log('temperatura u C: ' + Math.round(response.main.temp));
-            $("#tempC").text($temp['c']);
+           $("#tempC").text($temp['c']);
             //$("#weatherIcon").attr("src", $iconUrl);
-            console.log('temperatura u F: ' + response.main.temp*9/5+32);
-            });
+          });
     });
     $("#getNewQuote").on("click", randomQuote);
         $("#tempC").on('click', function () {
