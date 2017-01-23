@@ -1,8 +1,8 @@
 
 function searchWiki() {
-
+    var $searchString = $("#searchText");
     var $wikiElem=$("#wikipedia-links");
-    var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&prop=info&inprop=url&callback=wikiCallback&search=" + $city;
+    var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&prop=info&inprop=url&callback=wikiCallback&search=" + $searchString;
 
     // clear out old data before new request
     $wikiElem.text("");
@@ -38,4 +38,4 @@ function searchWiki() {
     return false;
 };
 
-$('#form-container').submit(searchWiki);
+$('#search-input').submit(searchWiki);

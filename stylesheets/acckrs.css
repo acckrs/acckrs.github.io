@@ -55,13 +55,13 @@ body {
 .grow:hover { transform: scale(1.05); }
 
 
-#custom-search-input {
+#search-input {
         margin:0;
         margin-top: 10px;
         padding: 0;
     }
  
-    #custom-search-input .search-query {
+    #search-input .search-query {
         padding-right: 3px;
         padding-right: 4px \9;
         padding-left: 3px;
@@ -74,7 +74,7 @@ body {
         border-radius: 3px;
     }
  
-    #custom-search-input button {
+    #search-input button {
         border: 0;
         background: none;
         /** belows styles are working good */
