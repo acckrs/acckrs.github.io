@@ -13,6 +13,8 @@ $(document).ready(function () {
             url: $url,
             dataType: "JSONP",
             type: "GET",
+            cache: false
+
             
         }).done(function (response) {
             $("#quoteText").text(response.quoteText);
@@ -37,7 +39,8 @@ $(document).ready(function () {
         $iconUrl = 'http://openweathermap.org/img/w/';
         $.ajax({
             url: $weatherUrl,
-            type:"GET"
+            type: "GET",
+            cache: false
         }).done(function (response) {
             $temp = {
                 "c": Math.round(response.main.temp) + ' C  ' + response.weather[0].description,
