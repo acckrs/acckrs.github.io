@@ -9,22 +9,14 @@ function searchWiki() {
 
 
 
-    /*  function titleCase(str) {
-          var splitStr = str.toLowerCase().split(' ');
-          for (var i = 0; i < splitStr.length; i++) {
-               // Assign it back to the array
-              splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-          }
-          // Directly return the joined string
-          return splitStr.join(' ');
-      }
-      */
     console.log($searchString);
     $.ajax({
         url: $wikiUrl,
         dataType: "JSONP"
     }).done(function (result) {
         console.log(result);
+        console.log($searchString);
+        console.log("Nista");
         $("#wikipedia-links").html('<ul class="well" id="wikipedia-links">');
         for (var j = 0; j < result[3].length; j++) {
             $("#wikipedia-links").append('<li><a href="' + result[3][j] + '">' +
