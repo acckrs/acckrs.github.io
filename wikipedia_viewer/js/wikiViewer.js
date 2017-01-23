@@ -19,11 +19,12 @@ function searchWiki() {
         return splitStr.join(' ');
     }
     */
- 
+    console.log($searchString);
     $.ajax({
         url: $wikiUrl,
         dataType:"JSONP"
     }).done(function (result) {
+        console.log(result);
         $("#wikipedia-links").html('<ul class="well" id="wikipedia-links">');
         for (var j = 0; j < result[3].length; j++) {
             $("#wikipedia-links").append('<li><a href="' + result[3][j] + '">' +
