@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $.ajaxSetup({ cache: false });
+
     $("#search-form").submit(function () {
         var $searchString = $("#searchText").val();
         var $wikiElem = $("#wikipedia-links");
