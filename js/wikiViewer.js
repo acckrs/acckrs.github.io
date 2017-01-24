@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#submit-btn").click(function () {
         var $searchString = $("#searchText").val();
         var $wikiElem = $("#wikipedia-links");
-        var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&prop=info&inprop=url&callback=wikiCallback&search=text";
+        var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&prop=info&inprop=url&callback=wikiCallback&search=" + $searchString;
 
         // clear out old data before new request
         $wikiElem.text("");
