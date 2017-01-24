@@ -72,7 +72,20 @@ body {
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
-    }
+        
+        /*autocomplete stuff*/
+		background: none repeat scroll 0 0 #fff;
+		border: 0 none;
+		color: #7F7F7F;
+		float: left;
+		font: 12px 'Helvetica','Lucida Sans Unicode','Lucida Grande',sans-serif;
+		height: 20px;
+		margin: 0;
+		padding: 10px;
+		transition: background 0.3s ease-in-out 0s;
+		width: 300px;
+	
+     }
  
     #search-input button {
         border: 0;
