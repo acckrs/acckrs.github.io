@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $.ajaxSetup({ cache: false });
-   // resetForms();
+
 
     $("#search-form").submit(function () {
         var $searchString = $("#searchText").val();
@@ -31,10 +31,8 @@ $(document).ready(function () {
             }
 
         });
-
-        function resetForms() {
-            document.forms['search-form'].reset();
-        }
+        $("#search-form").val("");
+     
      /*   $("#searchText").autocomplete({
             source: function (request, response) {
                 console.log(request.term);
