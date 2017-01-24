@@ -74,8 +74,8 @@ body {
         border-radius: 3px;
         
         /*autocomplete stuff*/
-		background: none repeat scroll 0 0 #fff;
-		border: 0 none;
+		background-color:white;
+		border: solid ;
 		color: #7F7F7F;
 		margin: 0;
 		padding: 10px;
