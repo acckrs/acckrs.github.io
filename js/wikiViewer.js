@@ -31,7 +31,7 @@ $(document).ready(function () {
             }
 
         });
-        $("#search-form").val("");
+        $("#search-form").attr("placeholder","");
      
      /*   $("#searchText").autocomplete({
             source: function (request, response) {

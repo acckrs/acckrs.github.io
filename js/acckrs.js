@@ -13,12 +13,10 @@ $(document).ready(function () {
             dataType: "JSONP",
             type: "GET",
             cache: false
-
-            
-        }).done(function (response) {
-            $("#quoteText").text(response.quoteText);
-            $("#quoteAuthor").text(response.quoteAuthor);
-            $("#tweetQuote").attr("href", "http://twitter.com/home/?status=" + response.quoteText + '(' + response.quoteAuthor + ')');
+            }).done(function (response) {
+                $("#quoteText").text(response.quoteText);
+                $("#quoteAuthor").text(response.quoteAuthor);
+                $("#tweetQuote").attr("href", "http://twitter.com/home/?status=" + response.quoteText + '(' + response.quoteAuthor + ')');
           });
     };
       
@@ -48,7 +46,9 @@ $(document).ready(function () {
           });
     });
     $("#getNewQuote").on("click", randomQuote);
-        $("#tempC").on('click', function () {
+
+    //When click on temp in C, change to F and vice-versa
+    $("#tempC").on('click', function () {
           var current = $(this).data('nexttemp');
           $("#tempC").text($temp[current]);
           if (current == 'c') {
