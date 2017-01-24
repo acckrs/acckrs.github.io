@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $.ajaxSetup({ cache: false });
-    resetForms();
+   // resetForms();
 
     $("#search-form").submit(function () {
         var $searchString = $("#searchText").val();
