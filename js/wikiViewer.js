@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#submit-btn").click(function () {
+    $("#search-form").submit(function () {
         var $searchString = $("#searchText").val();
         var $wikiElem = $("#wikipedia-links");
         var $wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&prop=info&inprop=url&callback=wikiCallback&search=" + $searchString;
