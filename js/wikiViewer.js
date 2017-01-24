@@ -15,7 +15,7 @@ $(document).ready(function () {
         });
 
         // clear out old data before new request
-        $wikiElem.text("");
+        //$wikiElem.text("");
 
 
 
