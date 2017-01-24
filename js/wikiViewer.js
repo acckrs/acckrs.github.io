@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $.ajaxSetup({ cache: false });
+    resetForms();
 
     $("#search-form").submit(function () {
         var $searchString = $("#searchText").val();
@@ -13,11 +14,6 @@ $(document).ready(function () {
             'callback':'wikiCallback',
             'search': $searchString
         });
-
-        // clear out old data before new request
-        //$wikiElem.text("");
-
-
 
         console.log($searchString);
         $.ajax({
@@ -36,6 +32,9 @@ $(document).ready(function () {
 
         });
 
+        function resetForms() {
+            document.forms['search-form'].reset();
+        }
      /*   $("#searchText").autocomplete({
             source: function (request, response) {
                 console.log(request.term);
