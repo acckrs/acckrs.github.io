@@ -73,12 +73,14 @@ body {
         -moz-border-radius: 3px;
         border-radius: 3px;
         
-        /*autocomplete stuff*/
-		background-color:white;
-		border: solid ;
+        /*autocomplete stuff
+        background-color: white;
+        background:
+		background: none repeat scroll 0 0 #fff;
+		border: 0 none;
 		color: #7F7F7F;
 		margin: 0;
-		padding: 10px;
+		padding: 10px;*/
 		
 	
      }

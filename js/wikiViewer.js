@@ -31,7 +31,7 @@ $(document).ready(function () {
 
         });
 
-        $("#searchText").autocomplete({
+     /*   $("#searchText").autocomplete({
             source: function (request, response) {
                 console.log(request.term);
                 $.ajax({
@@ -47,9 +47,9 @@ $(document).ready(function () {
                     }
                 });
             }
-        });
+        });*/
 
-        return false;
+       // return false;
     })
 
 
