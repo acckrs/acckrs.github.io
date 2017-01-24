@@ -6,6 +6,7 @@ $(document).ready(function () {
         var $searchString = $("#searchText").val();
         var $wikiElem = $("#wikipedia-links");
         var $wikiUrl = "https://en.wikipedia.org/w/api.php?";
+        //crate wiki api url
         $wikiUrl += $.param({
             'action':'opensearch',
             'format':'json',
@@ -16,6 +17,8 @@ $(document).ready(function () {
         });
 
         console.log($searchString);
+
+        //call ajax
         $.ajax({
             url: $wikiUrl,
             dataType: "JSONP"
@@ -29,28 +32,11 @@ $(document).ready(function () {
                     );
                 $("#wikipedia-links").append('</ul>');
             }
-
         });
-        $("#search-form").attr("placeholder","");
-     
-     /*   $("#searchText").autocomplete({
-            source: function (request, response) {
-                console.log(request.term);
-                $.ajax({
-                    url: "http://en.wikipedia.org/w/api.php",
-                    dataType: "jsonp",
-                    data: {
-                        'action': "opensearch",
-                        'format': "json",
-                        'search': request.term
-                    },
-                    success: function (data) {
-                        response(data[1]);
-                    }
-                });
-            }
-        });*/
 
+        //try to clear search  box
+        $("#search-form").attr("placeholder","");
+   
         return false;
     })
 

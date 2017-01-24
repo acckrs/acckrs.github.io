@@ -61,7 +61,7 @@ body {
         padding: 0;
     }
  
-    #search-input .search-query {
+#search-input .search-query {
         padding-right: 3px;
         padding-right: 4px \9;
         padding-left: 3px;
@@ -72,20 +72,10 @@ body {
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
-        
-        /*autocomplete stuff
-        background-color: white;
-        background:
-		background: none repeat scroll 0 0 #fff;
-		border: 0 none;
-		color: #7F7F7F;
-		margin: 0;
-		padding: 10px;*/
-		
 	
      }
  
-    #search-input button {
+#search-input button {
         border: 0;
         background: none;
         /** belows styles are working good */
