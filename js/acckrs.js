@@ -1,13 +1,16 @@
 
 $(document).ready(function () {
+
+    //generate random quote
     function randomQuote() {
+        //create url for ajax call
         var $url = "http://api.forismatic.com/api/1.0/";
         $url += '?&' + $.param({
             'method': 'getQuote',
             'format': 'jsonp',
             'lang': 'en'
            })+'&jsonp=?';
-
+        //ajax call for random quote
         $.ajax({
             url: $url,
             dataType: "JSONP",
