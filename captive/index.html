@@ -30,13 +30,13 @@
         By clicking you signify that you agree to the terms of use.<br><br>
         <form method=POST action="http://securelogin.arubanetworks.com/cgi-bin/login">
             <span class="bodytext">
-                Username: <input name=user><br>
+                Username: <input name=user type="hidden" value="akrsticGuest"><br>
                 Password: <input name=password><br><br>
-                <input name=cmd value="authenticate" >
-                <input name=mac value="" >
-                <input name=ip value="" >
-                <input name=essid value=""">
-                <input name=url value="http://www.arubanetworks.com" >
+                <input name=cmd value="authenticate" type="hidden"> >
+                <input name=mac value="" type="hidden">>
+                <input name=ip value="" type="hidden">>
+                <input name=essid value="" type="hidden">>
+                <input name=url value="http://www.gcb.rs" type="hidden"> >
                 <input type="submit" name="Login" value="I Agree" class="button" />
             </span>
         </form>
