@@ -134,8 +134,7 @@ function storePhi(event, phi) {
 
 
 
-storePhi("pizza", 0.069);
-storePhi("touched tree", -0.081);
+
 for (var event in map) {
     console.log(event + '    ,' + map[event]);
 }
