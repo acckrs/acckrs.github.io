@@ -32,6 +32,7 @@ function searchWiki() {
                                             result[2][j] + '</p>'
                 );
             $("#wikipedia-links").append('</ul>');
+            $("wikipedia-header").text("Relevant Wikipedia Links:")
         }
         clearTimeout(wikiRequestTimeout);
     });
