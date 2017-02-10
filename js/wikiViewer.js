@@ -1,18 +1,18 @@
-$(document).ready(function () {
+$(document).ready(function() {
     $.ajaxSetup({ cache: false });
 
 
-    $("#search-form").submit(function () {
+    $("#search-form").submit(function() {
         var $searchString = $("#searchText").val();
         var $wikiElem = $("#wikipedia-links");
         var $wikiUrl = "https://en.wikipedia.org/w/api.php?";
         //crate wiki api url
         $wikiUrl += $.param({
-            'action':'opensearch',
-            'format':'json',
-            'prop':'info',
-            'inprop':'url',
-            'callback':'wikiCallback',
+            'action': 'opensearch',
+            'format': 'json',
+            'prop': 'info',
+            'inprop': 'url',
+            'callback': 'wikiCallback',
             'search': $searchString
         });
 
@@ -22,27 +22,29 @@ $(document).ready(function () {
         $.ajax({
             url: $wikiUrl,
             dataType: "JSONP"
-        }).done(function (result) {
+        }).done(function(result) {
             console.log($wikiUrl);
             $("#wikipedia-links").html('<ul id="wikipedia-links">');
             for (var j = 0; j < result[3].length; j++) {
                 $("#wikipedia-links").append('<li><a href="' + result[3][j] + '">' +
-                                                result[1][j] + '</a><p>' +
-                                                result[2][j] + '</p>'
-                    );
+                    result[1][j] + '</a><p>' +
+                    result[2][j] + '</p>'
+                );
                 $("#wikipedia-links").append('</ul>');
+                $("wikipedia-header").text('Relevant Wikipedia Links:');
+
             }
         });
 
         //try to clear search  box
-        $("#search-form").attr("placeholder","");
-   
+        $("#search-form").attr("placeholder", "");
+
         return false;
     })
 
 
-    
 
-  
+
+
 
 })
