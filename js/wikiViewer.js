@@ -30,7 +30,7 @@ $(document).ready(function() {
                     result[2][j] + '</p>'
                 );
                 $("#wikipedia-links").append('</ul>');
-                $("wikipedia-header").text('Relevant Wikipedia Links:');
+                $("wikipedia-header").html('<h3 id="wikipedia-header" class="lead-text"> Relevant Wikipedia Links: </h3>');
 
                 //funny shoes
                 console.log("funny");
