@@ -6,7 +6,7 @@ $(document).ready(function() {
             dataType: "JSONP",
             type: "GET"
         }).done(function(response) {
-            console.log(data);
+            console.log(response);
         })
     };
     $("#testTwich").on("click", checkTwich);
