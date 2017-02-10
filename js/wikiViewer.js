@@ -1,7 +1,6 @@
 $(document).ready(function() {
     $.ajaxSetup({ cache: false });
 
-
     $("#search-form").submit(function() {
         var $searchString = $("#searchText").val();
         var $wikiElem = $("#wikipedia-links");
@@ -33,6 +32,9 @@ $(document).ready(function() {
                 $("#wikipedia-links").append('</ul>');
                 $("wikipedia-header").text('Relevant Wikipedia Links:');
 
+                //funny shoes
+                console.log("funny");
+
             }
         });
 
@@ -41,10 +43,4 @@ $(document).ready(function() {
 
         return false;
     })
-
-
-
-
-
-
 })
