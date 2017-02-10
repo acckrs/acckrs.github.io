@@ -23,7 +23,7 @@ $(document).ready(function() {
             dataType: "JSONP"
         }).done(function(result) {
             console.log($wikiUrl);
-            $("wikipedia-header").html('<h3 id="wikipedia-header" class="lead-text"> Relevant Wikipedia Links: </h3>');
+            $("#wikipedia-header").html('<h3 id="wikipedia-header" class="lead-text"> Relevant Wikipedia Links: </h3>');
             $("#wikipedia-links").html('<ul id="wikipedia-links">');
             for (var j = 0; j < result[3].length; j++) {
                 $("#wikipedia-links").append('<li><a href="' + result[3][j] + '">' +
