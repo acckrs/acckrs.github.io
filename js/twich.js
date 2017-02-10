@@ -9,5 +9,5 @@ $(document).ready(function() {
             console.log(data);
         })
     };
-    $("#testTwich").on("ckuck", checkTwich);
+    $("#testTwich").on("click", checkTwich);
 });
