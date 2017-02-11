@@ -15,7 +15,7 @@ $(document).ready(function() {
                     return console.log(response._links.channel + " is offline")
                 } else {
                     $("#twichLogo").html('<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="twichLogo"><img class="img-thumbnail img-responsive" src="' + response.stream.channel.logo + '"/></div>')
-                    $("#twichLink").html('<div class="animated fadeInDown col-xs-8 col-sm-8 col-md-8 col-lg-8" id="twichLink"><a class="btn btn-large btn-block btn-default" href="' + response.stream.channel.url + '">' + response.name + '</a></div>')
+                    $("#twichLink").html('<div class="animated fadeInDown col-xs-8 col-sm-8 col-md-8 col-lg-8" id="twichLink"><a class="btn btn-large btn-block btn-default" href="' + response.stream.channel.url + '">' + response.stream.channel.display_name + '</a></div>')
                     return console.log(response);
                 }
             })
