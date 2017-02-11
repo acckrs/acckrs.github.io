@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype>
 <html lang="en">
 
 <head>
@@ -6,22 +6,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-            <script src="http://acckrs.github.io/js/acckrs.js"></script>
-            <script src="http://acckrs.github.io/js/twich.js"></script>
-            <link href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css' rel='stylesheet' type='text/css'>
-            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-                crossorigin="anonymous">
-                <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-                <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-                    crossorigin="anonymous">
-                    <link rel="stylesheet" type="text/css" href="http://acckrs.github.io/stylesheets/acckrs.css" media="screen">
-                    <meta charset="utf-8">
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <meta name="author" content="Aleksandar Krstic">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="http://acckrs.github.io/js/acckrs.js"></script>
+    <script src="http://acckrs.github.io/js/twich.js"></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://acckrs.github.io/stylesheets/acckrs.css" media="screen">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Aleksandar Krstic">
 </head>
 
 <body>
@@ -40,9 +40,9 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             </button>
-                            <span id="tempC" class="navbar-brand navbar-font" data-nexttemp="f">°C</span>
-                            <span id="weatherDesc" class="navbar-brand navbar-font"></span><img id="weatherIcon" class="navbar-brand navbar-font"
-                            />
+                        <span id="tempC" class="navbar-brand navbar-font" data-nexttemp="f">°C</span>
+                        <span id="weatherDesc" class="navbar-brand navbar-font"></span><img id="weatherIcon" class="navbar-brand navbar-font"
+                        />
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right ">
@@ -79,14 +79,21 @@
         </div>
         <!-- Twich content -->
         <div class="col-xs-12">
+            <div class="row" id="twichResult">
+                    <div id="twichLogo"></div>
+            </div>
+
+            <div id="footer_text">
+                   <hr>
+              </div>
             <button id="testTwich" class="btn btn-primary">
                      Test Twich (check console)
                  </button>
-                  <button id="onlineTwich" class="btn btn-primary">
+            <button id="onlineTwich" class="btn btn-primary">
                      Online
                  </button>
-                 <button id="offlineTwich" class="btn btn-primary">
-                     Offlineline
+            <button id="offlineTwich" class="btn btn-primary">
+                     Offline
                  </button>
         </div>
         <!-- footer -->
