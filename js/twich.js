@@ -108,7 +108,7 @@ $(document).ready(function() {
             dataType: "JSONP",
             type: "GET"
         }).done(function(response) {
-            $("#twichLogo").html('<div id="twichLogo"><img src="' + response.logo + '"/></div>')
+            $("#twichLogo").html('<div id="twichLogo"><img class="img-thumbnail img-responsive" src="' + response.logo + '"/></div>')
             return console.log(response);
 
         })
