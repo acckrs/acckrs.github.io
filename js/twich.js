@@ -11,7 +11,5 @@ $(document).ready(function() {
 
         })
     };
-    //$("#testTwich").on("click", checkTwich);
-    $("#onlineTwich").on("click", checkTwich());
-    // $("#offlineTwich").on("click", checkTwich(offline));
+    $("#testTwich").on("click", checkTwich);
 });
