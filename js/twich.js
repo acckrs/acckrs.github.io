@@ -15,7 +15,7 @@ $(document).ready(function() {
                     return console.log(response._links.channel + " is offline")
                 } else {
                     $("#twichTable > tbody:last-child").append('<tr>' +
-                        '<td><img class="animated fadeInDown img-thumbnail img-responsive" src="' + response.stream.channel.logo + '"/></td>' +
+                        '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 30%; height: 30%" src="' + response.stream.channel.logo + '"/></td>' +
                         '<td>' + response.stream.channel.display_name + '</td>' +
                         '<td><a href src="' + response.stream.channel.url + '">' + response.stream.channel.url + '</a></td>' +
                         '</tr>');
