@@ -17,7 +17,7 @@ $(document).ready(function() {
                     $("#twichTable > tbody:last-child").append('<tr>' &&
                         '<td><img class="img-thumbnail img-responsive" src="' + response.stream.channel.logo + '"/></td>' &&
                         '<td>' + response.stream.channel.display_name + '</td>' &&
-                        '<td><a class="btn btn-large btn-block btn-default" href="' + response.stream.channel.url + '">' + response.stream.channel.url + '</a></td>' &&
+                        '<td>Text3</td>' &&
                         '</tr>');
                     $("#twichLink").html('<div class="animated fadeInDown col-xs-8 col-sm-8 col-md-8 col-lg-8" id="twichLink"><a class="btn btn-large btn-block btn-default" href="' + response.stream.channel.url + '">' + response.stream.channel.display_name + '</a></div>')
                     return console.log(response);
