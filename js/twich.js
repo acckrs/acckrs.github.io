@@ -3,7 +3,7 @@ $url = "https://wind-bow.gomix.me/twitch-api/streams/";
 
 
 $(document).ready(function() {
-    function checkTwich() {
+    function checkOnlineTwiches() {
         $("#twichTableBody").html('<tbody id="twichTableBody"><tr><td></td><td></td><td></td></tr></tbody>');
         for (var i = 0; i < streams.length; i++) {
 
@@ -16,9 +16,9 @@ $(document).ready(function() {
                     return console.log(response._links.channel + " is offline")
                 } else {
                     $("#twichTable > tbody:last-child").append('<tr>' +
+                        '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 30%; height: 10%" src="' + response.stream.channel.logo + '"/></td>' +
                         '<td>' + response.stream.channel.display_name + '</td>' +
                         '<td><a href class="btn btn-large btn-block btn-default" src="' + response.stream.channel.url + '">' + response.stream.channel.url + '</a></td>' +
-                        '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 30%; height: 30%" src="' + response.stream.channel.logo + '"/></td>' +
                         '</tr>');
 
                     return console.log(response);
@@ -26,5 +26,5 @@ $(document).ready(function() {
             })
         };
     }
-    $("#testTwich").on("click", checkTwich);
+    $("#onlineTwich").on("click", checkOnlineTwiches);
 });
