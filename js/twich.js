@@ -15,7 +15,7 @@ $(document).ready(function() {
                 type: "GET"
             }).done(function(response) {
                 if (!response.stream) {
-                    return console.log(response + " is offline")
+                    return console.log(response)
                 } else {
                     $("#twichTable > tbody:last-child").append('<tr>' +
                         '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 10%; height: 10%" src="' + response.stream.channel.logo + '"/></td>' +
