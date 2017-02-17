@@ -59,7 +59,7 @@ $(document).ready(function() {
                         '<td><a class="btn btn-large btn-block btn-default" href="' + response._links.channel + '">' + response._links.channel + '</a></td>' +
                         '<td>Offine</td>' +
                         '</tr>');
-                    return console.log(response._links.channel + " is offline")
+                    return console.log(response)
                 } else {
                     return console.log(response._links.channel + " is online")
                 }
