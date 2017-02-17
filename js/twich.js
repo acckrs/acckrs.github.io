@@ -6,7 +6,25 @@ $(document).ready(function() {
 
 
     function checkOnlineTwiches() {
-        $("#twichTableBody").html('<tbody id="twichTableBody"><tr><td></td><td></td><td></td></tr></tbody>');
+        $('#twichTable').html('<table item-width="70%" id="twichTable" class="table">' +
+            '<thead>' +
+            '<tr>' +
+            '<th>Channel logo</th>' +
+            '<th>Channel name</th>' +
+            '<th>Channel link</th>' +
+            '<th>Channel status</th>' +
+            '</tr>' +
+            '</thead>' +
+            '<tbody id="twichTableBody">' +
+            '<tr>' +
+            '<td></td>' +
+            '<td></td>' +
+            '<td></td>' +
+            '<td></td>' +
+            '</tr>' +
+            '</tbody>' +
+            '</table>');
+        $("#twichTableBody").html('<tbody id="twichTableBody"><tr><td><td></td></td><td></td><td></td></tr></tbody>');
         for (var i = 0; i < streams.length; i++) {
 
             $.ajax({
