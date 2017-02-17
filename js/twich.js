@@ -42,7 +42,7 @@ $(document).ready(function() {
                     $("#twichTable > tbody:last-child").append('<tr>' +
                         '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 10%; height: 10%" src="' + response.stream.channel.logo + '"/></td>' +
                         '<td>' + response.stream.channel.display_name + '</td>' +
-                        '<td><a class="btn btn-large btn-block btn-default" href="' + replaceText(response.stream.channel.url) + '">' + replaceText(response.stream.channel.url) + '</a></td>' +
+                        '<td><a class="btn btn-large btn-block btn-default" href="' + response.stream.channel.url + '">' + response.stream.channel.url + '</a></td>' +
                         '<td>Online</td>' +
                         '</tr>');
 
@@ -78,7 +78,7 @@ $(document).ready(function() {
             }).done(function(response) {
                 if (!response.stream) {
                     $("#twichTable > tbody:last-child").append('<tr>' +
-                        '<td><a class="btn btn-large btn-block btn-default" href="' + response._links.channel + '">' + response._links.channel + '</a></td>' +
+                        '<td><a class="btn btn-large btn-block btn-default" href="' + replaceText(response._links.channel) + '">' + replaceText(response._links.channel) + '</a></td>' +
                         '<td>Offine</td>' +
                         '</tr>');
                     return console.log(replaceText(response._links.channel));
