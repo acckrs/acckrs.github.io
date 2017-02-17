@@ -5,7 +5,7 @@ $url = "https://wind-bow.gomix.me/twitch-api/streams/";
 $(document).ready(function() {
     function replaceText(str) {
         var rep = "https://api.twitch.tv/kraken/channels/";
-        var newStr = str.replace(/rep/i, "http://www.twich.tv/");
+        var newStr = str.replace(/rep/i, "http://www.twitch.tv/");
         return newStr;
     };
 
