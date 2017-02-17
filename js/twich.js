@@ -24,7 +24,7 @@ $(document).ready(function() {
                         '<td>Online</td>' +
                         '</tr>');
 
-                    return console.log(response);
+                    return console.log('<td><a href class="btn btn-large btn-block btn-default" src="' + response.stream.channel.url + '">' + response.stream.channel.url + '</a></td>');
                 }
             })
         };
