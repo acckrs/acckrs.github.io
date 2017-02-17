@@ -3,7 +3,11 @@ $url = "https://wind-bow.gomix.me/twitch-api/streams/";
 
 
 $(document).ready(function() {
-
+    function replaceText(str) {
+        var rep = "https://api.twich.tv/kraken/channels/";
+        var newStr = str.replace(/rep/i, "http://www.twich.tv/");
+        return newStr;
+    };
 
     function checkOnlineTwiches() {
         $('#twichTable').html('<table item-width="70%" id="twichTable" class="table">' +
@@ -77,9 +81,9 @@ $(document).ready(function() {
                         '<td><a class="btn btn-large btn-block btn-default" href="' + response._links.channel + '">' + response._links.channel + '</a></td>' +
                         '<td>Offine</td>' +
                         '</tr>');
-                    return console.log(response)
+                    return console.log(replaceText(response._links.channel));
                 } else {
-                    return console.log(response._links.channel + " is online")
+                    return console.log(response._links.channel + " is online");
                 }
             })
         };
