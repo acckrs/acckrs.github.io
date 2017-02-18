@@ -47,7 +47,7 @@ $(document).ready(function() {
                     '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 10%; height: 10%" src="' + response.stream.channel.logo + '"/></td>' +
                     '<td>' + response.stream.channel.display_name + '</td>' +
                     '<td><a class="btn btn-large btn-block btn-default" href="' + response.stream.channel.url + '">' + response.stream.channel.url + '</a></td>' +
-                    '<td>Online</td>' +
+                    '<td>'+response.stream.channel.status + '</td>' +
                     '</tr>');
 
                 return console.log(response.stream.channel.display_name + ' is online');
@@ -90,7 +90,7 @@ $(document).ready(function() {
                         '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 10%; height: 10%" src="' + response.stream.channel.logo + '"/></td>' +
                         '<td>' + response.stream.channel.display_name + '</td>' +
                         '<td><a class="btn btn-large btn-block btn-default" href="' + response.stream.channel.url + '">' + response.stream.channel.url + '</a></td>' +
-                        '<td>Online</td>' +
+                        '<td>'+response.stream.channel.status + '</td>' +
                         '</tr>');
 
                     return console.log(response);
