@@ -50,7 +50,7 @@ $(document).ready(function() {
                     '<td>Online</td>' +
                     '</tr>');
 
-                return console.log(response);
+                return console.log(response.stream.channel.display_name + ' is online');
             }
         })
 
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         '<td>Online</td>' +
                         '</tr>');
 
-                    return console.log(response.stream.channel.display_name + ' is online');
+                    return console.log(response);
                 }
             })
         };
