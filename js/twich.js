@@ -2,7 +2,7 @@ var streams = ["brunofin", "comster404", "ESL_SC2", "OgamingSC2", "cretetion", "
 $url = "https://wind-bow.gomix.me/twitch-api/streams/";
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     function replaceText(str) {
         var rep = "https://api.twitch.tv/kraken/channels/";
         var newStr = str.replace(/https:\/\/api.twitch.tv\/kraken\/channels\//i, "http://www.twitch.tv/");
@@ -43,7 +43,7 @@ $(document).ready(function () {
             url: $url + 'freecodecamp',
             dataType: "JSONP",
             type: "GET"
-        }).done(function (response) {
+        }).done(function(response) {
             if (!response.stream) {
                 $("#twichTable > tbody:last-child").append('<tr>' +
                     '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 10%; height: 10%" src="/img/freecodecamp-profile_image-d9514f2df0962329-300x300.png"/></td>' +
@@ -92,15 +92,15 @@ $(document).ready(function () {
                 url: $url + streams[i],
                 dataType: "JSONP",
                 type: "GET"
-            }).done(function (response) {
+            }).done(function(response) {
                 if (!response.stream) {
                     return console.log(response._links.channel + ' is offline')
                 } else {
                     $("#twichTable > tbody:last-child").append('<tr>' +
-                        '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 10%; height: 10%" src="' + response.stream.channel.logo + '"/></td>' +
+                        '<td><img class="animated fadeInDown img-thumbnail img-responsive" style="width: 20%; height: 20%" src="' + response.stream.channel.logo + '"/></td>' +
                         '<td>' + response.stream.channel.display_name + '</td>' +
                         '<td><a class="btn btn-large btn-block btn-default" href="' + response.stream.channel.url + '">' + response.stream.channel.url + '</a></td>' +
-                        '<td>' + truncateString(response.stream.channel.status,20) + '</td>' +
+                        '<td>' + truncateString(response.stream.channel.status, 20) + '</td>' +
                         '</tr>');
 
                     return console.log(response);
@@ -132,7 +132,7 @@ $(document).ready(function () {
                 url: $url + streams[i],
                 dataType: "JSONP",
                 type: "GET"
-            }).done(function (response) {
+            }).done(function(response) {
                 if (!response.stream) {
                     $("#twichTable > tbody:last-child").append('<tr>' +
                         '<td><a class="btn btn-large btn-block btn-default" href="' + replaceText(response._links.channel) + '">' + replaceText(response._links.channel) + '</a></td>' +
